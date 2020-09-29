@@ -47,7 +47,7 @@ while ret:
         PILImg = Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))  # 色域從opencv的BGR改為PIL的RGB
         PILFont = ImageFont.truetype(os.path.join("resource", "NotoSansTC-Medium.otf"), 14)
         PILDraw = ImageDraw.Draw(PILImg)
-        PILDraw.text((x, y-25), labels[result[0]], font=PILFont, align="left")
+        PILDraw.text((x, y-25), "Hello, " + labels[result[0]], font=PILFont, align="left")
         frame = cv2.cvtColor(np.asarray(PILImg), cv2.COLOR_RGB2BGR)  # 色域改回來opencv的BGR
     # 顯示畫面
     cv2.imshow(windowName, frame)
