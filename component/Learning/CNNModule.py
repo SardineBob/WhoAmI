@@ -5,7 +5,7 @@ from keras.layers import Conv2D, Dropout, MaxPooling2D, Flatten, Dense
 # 卷積神經網路模型物件
 class CNNModule():
 
-    labels = ["Bob", "None"]
+    labels = ["Bob", "霏霏", "None"]
     __model = None
 
     # 初始化
@@ -70,7 +70,7 @@ class CNNModule():
         )
         # 加入輸出層，最後的結果我們分成10個影像類別(10個神經元)，並使用激活函式softmax輸出結果，轉換成預測每個類別的機率
         model.add(
-            Dense(2, activation='softmax')
+            Dense(3, activation='softmax')
         )
         # 輸出外界供使用
         self.__model = model

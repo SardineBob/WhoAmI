@@ -22,8 +22,10 @@ for rootPath, path, files in os.walk("faceImgSet"):
             # 放置Label(正確答案)
             if "Bob" in rootPath:
                 LabList.append([0])
-            if "None" in rootPath:
+            if "Fly" in rootPath:
                 LabList.append([1])
+            if "None" in rootPath:
+                LabList.append([2])
 
 # 影像訓練樣本(轉成四層階陣列，1000張32*32擁有RGB深度3的樣本)
 templates = np.array(ImgList)
