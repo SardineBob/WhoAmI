@@ -1,0 +1,11 @@
+conda create -n WhoAmI.env python==3.7.0
+conda activate WhoAmI.env
+pip install numpy==1.18.1
+pip install Pillow==7.0.0
+pip install Keras==2.4.3
+pip install tensorflow-cpu==2.3.1
+pip install opencv-python==4.2.0.32
+# 匯出
+conda env export > WhoAmI.env.yml
+# 匯入
+conda env create -f xxx/xxx/WhoAmI.env.yml
